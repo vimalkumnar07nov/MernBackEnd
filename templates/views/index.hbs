@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="styles/homepage.css">
+</head>
+
+<body>
+
+    <section class="top-container">
+        <div class="top-header">
+            <div class="top-contact">
+                <span><i class="far fa-envelope"></i>&nbsp;<a
+                        href="mailto:someone@example.com">vimalkumar.zee@gmail.com</a></span>
+                <span><i class="fas fa-phone"></i>&nbsp;<a href="tel:+4733378901">+917070717794</a></span>
+            </div>
+            <div class="social-link">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!---------- Header -------------->
+
+    <div class="container">
+        <nav>
+            <a href="/"> <img src="images/logo.png" alt="logo image"> </a>
+
+            <div class="navlink" id="navLink">
+                <i class="fa fa-times-circle" id="circle" onclick="hideMenu()"></i>
+                <ul>
+                    <a href="">
+                        <li>HOME</li>
+                    </a>
+                    <a href="">
+                        <li>ABOUT</li>
+                    </a>
+                    <a href="">
+                        <li>CONTACT</li>
+                    </a>
+                    <a href="">
+                        <li>SERVICE</li>
+                    </a>
+                    <a href="">
+                        <li>BLOG</li>
+                    </a>
+                    <a href="/register">
+                        <li class="login">Register</li>
+                    </a>
+                    <a href="/login">
+                        <li class="login">Login</li>
+                    </a>
+                    <a href="">
+                        <li class="logout">Log Out</li>
+                    </a>
+                </ul>
+                <!-- <hr> -->
+            </div>
+            <i class="fa-solid fa-bars" id="bar" onclick="showMenu()"></i>
+        </nav>
+        <div class="hero-section">
+            <div class="text-div">
+                <h1>
+                    <span class="txt txt-1">Hi,</span>
+                    <span class="txt txt-2"> </span>
+
+                </h1>
+                <p>i am vimal kumar from laxmi nagar new delhi shakarpur new delhi,110092</p>
+                <a href="#" class="hero-btn">click</a>
+            </div>
+            <!-- <div class="slider">
+            <img src="/images/1.png" alt="" class="imgslider imgslider-1 show">
+            <img src="/images/2.png" alt="" class="imgslider imgslider-2">
+            <img src="/images/3.png" alt="" class="imgslider imgslider-3">
+            <img src="/images/4.png" alt="" class="imgslider imgslider-4">
+        </div> -->
+            <!-- Swiper -->
+            <div class="slider">
+                <div class="swiper mySwiper5 heroSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/images/1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/2.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/3.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/4.png" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/panda.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/panda.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/1.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- body section start here -->
+
+    <section class="main-body">
+        <div class="row-card">
+            <!-- card one-->
+            <div class="col">
+                <h1>ReactJs</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam quod doloremque deleniti repellat ex voluptatum
+                    perferendis?
+                </p>
+            </div>
+            <div class="col">
+                <h1>JavaScript</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam quod doloremque deleniti repellat ex voluptatum
+                    perferendis? Cupiditate expedita eaque autem! Repudiand
+                </p>
+            </div>
+            <div class="col">
+                <h1>NodeJs</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam quod doloremque deleniti repellat ex voluptatum
+                    perferendis? Cupiditate expedita eaque autem! Repudiand
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Middle links code start here============= -->
+
+    <section class="m-link">
+        <div class="row-link">
+            <div class="col-link">
+                <a href="#">
+                    <h1>JavaScript</h1>
+                </a>
+            </div>
+            <div class="col-link">
+                <a href="#">
+                    <h1>reactjs</h1>
+                </a>
+            </div>
+            <div class="col-link">
+                <a href="#">
+                    <h1>html</h1>
+                </a>
+            </div>
+            <div class="col-link">
+                <a href="#">
+                    <h1>css</h1>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact form and other information -->
+
+    <section class="contact-form">
+        <div class="mainform">
+            <!-- Contact Form Code Start Here-->
+            <div class="input-form">
+                <form action="/index.html" method="post">
+
+                    <input type="text" name="fname" placeholder="first name">
+                    <input type="text" name="lname" placeholder="last name">
+                    <input type="text" name="mobile" placeholder="mobile no.">
+                    <input type="email" name="email" placeholder="entre your E-mail">
+                    <textarea rows="5" cols="30" name="message" placeholder=" Entre your message"></textarea>
+                    <button type="submit" name="submit" class="form-btn">Submit</button>
+                </form>
+            </div>
+            <div class="info">
+                <h2>most useful resource</h2>
+                <img src="/images/panda.jpg" alt="">
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel dolor ratione obcaecati!
+                    Nesciunt quis numquam veritatis voluptatibus cumque reiciendis nisi similique alias labore,
+                    aliquam ducimus hic magni dolorem exercitationem quia. </p>
+                <div class="otherinfo">
+                    <h1><i class="fa fa-check" aria-hidden="true"></i>other info goes here</h1>
+                    <h1><i class="fa fa-check" aria-hidden="true"></i>other info goes here</h1>
+                    <h1><i class="fa fa-check" aria-hidden="true"></i>other info goes here</h1>
+                    <h1><i class="fa fa-check" aria-hidden="true"></i>other info goes here</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Swiper -->
+
+    <section class="swiper-auto-slide">
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/panda.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/1.png" alt=""></div>
+                <div class="swiper-slide"><img src="/images/2.png" alt=""></div>
+                <div class="swiper-slide"><img src="/images/3.png" alt=""></div>
+                <div class="swiper-slide"><img src="/images/4.png" alt=""></div>
+                <div class="swiper-slide"><img src="/images/panda.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/panda.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/panda.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/panda.jpg" alt=""></div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <!-- =================Slider 3  slider 3  slider 3-===== -->
+
+    <section class="slider3">
+        <!-- Swiper -->
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider3-img"><img src="/images/1.png" " alt=""></div>
+            <div class=" swiper-slide slider3-img "><img src=" /images/2.png" " alt=""></div>
+            <div class=" swiper-slide slider3-img "><img src=" /images/3.png" " alt=""></div>
+            <div class=" swiper-slide slider3-img "><img src=" /images/4.png" " alt=""></div>
+            <div class=" swiper-slide slider3-img "><img src=" /images/panda.jpg" " alt=""></div>
+            <div class=" swiper-slide slider3-img "><img src=" /images/1.png" " alt=""></div>
+            <div class=" swiper-slide slider3-img "><img src=" /images/panda.jpg" " alt=""></div>
+        </div>
+        <div class=" swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="footer">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block fs-4">
+                    <span>Get connected with us on social networks:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div class="fs-2 social-color">
+                    <a href="" class="me-4 text-reset ">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4 fs-3">
+                                <i class="fas fa-gem me-3"></i>Company name
+                            </h6>
+                            <p class="fs-4">
+                                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 fs-3">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Products
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Angular</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">React</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Vue</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Laravel</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 fs-3">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Pricing</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Settings</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Orders</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Help</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 fs-3">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                            <p><i class="fas fa-home me-3"></i> New Delhi,India</p>
+                            <p>
+                                <i class="fas fa-envelope me-2"></i>
+                                <a href="mailto:vimalkumar.zee@gmail.com">vimalkumar.zee@gmail.com</a>
+                                <!-- <a href="tel:+4733378901">+917070717794</a> -->
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i><a href="tel:+4733378901">+917070717794</a></p>
+                            <p><i class="fas fa-phone me-3"></i><a href="tel:+4733378901">+919504298588</a></p>
+
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4 fs-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2023 Copyright:
+                <a class="text-reset fw-bold fs-4" href="https://vimalreactapp.netlify.app/">vimalreactapp</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+    </section>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    {{!-- <script src="script.js"></script> --}}
+    <script>
+        {{> script}}
+    </script>
+
+</body>
+
+</html>
