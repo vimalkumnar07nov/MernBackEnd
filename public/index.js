@@ -1,4 +1,3 @@
-<script>
 
 // -----------image slider code
 
@@ -163,4 +162,3 @@ var swiper = new Swiper(".mySwiper3", {
 //         counter = 1
 //     }
 // }, 2000)
-</script>

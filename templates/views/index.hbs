@@ -4,9 +4,11 @@
 <head>
     {{>header}}
     <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
+    {{!-- <script src="index.js"></script> --}}
 
     <section class="top-container">
         <div class="top-header">
@@ -49,6 +51,9 @@
                     <a href="">
                         <li>SERVICE</li>
                     </a>
+                    <a href="/secret">
+                        <li class="logout">Secret Page</li>
+                    </a>
                     <a href="">
                         <li>BLOG</li>
                     </a>
@@ -58,7 +63,7 @@
                     <a href="/login">
                         <li class="login">Login</li>
                     </a>
-                    <a href="">
+                    <a href="/logout">
                         <li class="logout">Log Out</li>
                     </a>
                 </ul>
@@ -96,6 +101,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 
@@ -209,7 +215,6 @@
         <div class="swiper-button-prev"></div> -->
             <div class="swiper-pagination"></div>
         </div>
-
     </section>
 
     <!-- =================Slider 3  slider 3  slider 3-===== -->
@@ -218,26 +223,24 @@
         <!-- Swiper -->
         <div class="swiper mySwiper3">
             <div class="swiper-wrapper">
-                <div class="swiper-slide slider3-img"><img src="/images/1.png" " alt=""></div>
-            <div class=" swiper-slide slider3-img "><img src=" /images/2.png" " alt=""></div>
-            <div class=" swiper-slide slider3-img "><img src=" /images/3.png" " alt=""></div>
-            <div class=" swiper-slide slider3-img "><img src=" /images/4.png" " alt=""></div>
-            <div class=" swiper-slide slider3-img "><img src=" /images/panda.jpg" " alt=""></div>
-            <div class=" swiper-slide slider3-img "><img src=" /images/1.png" " alt=""></div>
-            <div class=" swiper-slide slider3-img "><img src=" /images/panda.jpg" " alt=""></div>
-        </div>
-        <div class=" swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-                <div class="autoplay-progress">
-                    <svg viewBox="0 0 48 48">
-                        <circle cx="24" cy="24" r="20"></circle>
-                    </svg>
-                    <span></span>
-                </div>
+                <div class="swiper-slide slider3-img"><img src="/images/1.png" alt=""></div>
+                <div class=" swiper-slide slider3-img "><img src=" /images/2.png" alt=""></div>
+                <div class=" swiper-slide slider3-img "><img src=" /images/3.png" alt=""></div>
+                <div class=" swiper-slide slider3-img "><img src=" /images/4.png" alt=""></div>
+                <div class=" swiper-slide slider3-img "><img src=" /images/panda.jpg" alt=""></div>
+                <div class=" swiper-slide slider3-img "><img src=" /images/1.png" alt=""></div>
+                <div class=" swiper-slide slider3-img "><img src=" /images/panda.jpg" alt=""></div>
             </div>
-    </section>
-
+            <div class=" swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </div>
 
     <section class="footer">
         <!-- Footer -->
@@ -368,17 +371,8 @@
     </section>
 
 
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    {{!-- <script src="script.js"></script> --}}
-    <script>
-        {{> script}}
-    </script>
+    <script src="index.js"></script>
 
 </body>
 

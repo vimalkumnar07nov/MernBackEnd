@@ -1,9 +1,9 @@
 require('dotenv').config()
-
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const bcrypt = require('bcryptjs');
+const cookieParser = require('cookie-parser');
 
 
 const app = express();
@@ -11,6 +11,8 @@ const port = process.env.PORT || 3000;
 
 require("./db/conn");
 const Register = require("./models/registers");
+const auth = require("./middleware/auth");
+
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
@@ -18,6 +20,7 @@ const partials_path = path.join(__dirname, "../templates/partials");
 // console.log(static_path);
 
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 app.set("view engine", "hbs");
@@ -26,12 +29,42 @@ hbs.registerPartials(partials_path);
 
 app.use(express.static(static_path));
 
-console.log(process.env.SECRET_KEY);
+
+// console.log(process.env.SECRET_KEY);
 
 app.get("/", (req, res) => {
     res.render("index");
     // res.send("Hello Pitter parker");  
 });
+app.get("/secret",auth, (req, res) => {
+    console.log(`cookies are : ${req.cookies.mernbackend}`);
+    res.render("secret");
+    // res.send("Hello Pitter parker");  
+});
+app.get("/logout", auth, async (req, res) => {
+     try {
+        
+         console.log(`user:- ${req.user}`);
+
+        //  single user logout code------
+        //  req.user.tokens = req.user.tokens.filter((curEle) => {
+        //      return curEle.token !== req.token;
+        //  });
+        //  all user logout in different devices-------
+         
+         req.user.tokens = [];
+
+
+         res.clearCookie("mernbackend");
+         console.log("log out successfully");
+         await req.user.save();
+         res.render("login");
+         
+     } catch (error) {
+         res.status(500).send(error);
+     }
+ })
+
 app.get("/register", (req, res) => {
     res.render("register");
 });
@@ -56,11 +89,18 @@ app.post("/register", async(req, res) => {
             const token = await registerUser.generateAuthToken();
             // console.log(`the token generated: ${token}`);
 
+            // set cookie--------
+            // syntex : - res.cookie("name", value, { optional});
 
+            res.cookie('mernbackend', token, {
+                httpOnly: true,
+                expires: new Date(Date.now() + 60000),
+            });
+            
             // to secure password before save (go to model register schema and write code)----
             const registered = await registerUser.save();
-            // console.log("the page part"+ registered);
-            res.status(201).render('index');  
+            console.log("the registered User's "+ registered);
+            res.status(201).render("login");  
             
         } else {
             res.send("passwords are not matching")
@@ -89,7 +129,15 @@ app.post("/login", async (req, res) => {
         const isPassMatch = await bcrypt.compare(password, userEmail.password);
 
         const token = await userEmail.generateAuthToken();
-            console.log(`Login token generated: ${token}`);
+        console.log(`Login token generated: ${token}`);
+        
+        // generate cookie on login time========-----
+        res.cookie('mernbackend', token, {
+            httpOnly: true,
+            expires : new Date(Date.now() + 60000),
+        });
+        
+        // generate cookie on login time code end----------
 
         if (isPassMatch) {
             res.status(201).render("index");
